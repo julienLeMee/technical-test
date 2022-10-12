@@ -22,48 +22,48 @@
       </div>
     </div>
 
-    <div class="form-bloc">
+    <form class="form-bloc">
       <div>
         <h6 class="limited-tag" >Limited Offer</h6>
       </div>
       <h3>Sign up to get your free trial today !</h3>
       <div class="form">
         <div class="form-input">
-          <h5>Name</h5>
-          <input type="text" placeholder="     Enter your name">
+          <label for="name">Name</label>
+          <input
+          type="text" name="name" aria-label="name" placeholder="Enter your name" id="name" required>
         </div>
         <div class="form-input">
-          <h5>Email</h5>
-          <input type="email" placeholder="    Enter your email">
+          <label for="email">Email</label>
+          <input type="email" name="email" aria-label="email" placeholder="Enter your email" id="email" required>
         </div>
         <div class="form-check">
-          <label class="form-check-label">
-            <input type="checkbox" class="form-check-input" name="conditions" id="conditions" value="checkedValue" required>
-            I agree to the <a href="#">terms & conditions</a>
+          <label class="conditions">
+            <input type="checkbox" class="form-check-input" name="conditions" id="check-conditions" value="checkedValue" required>
+            <span>I agree to the <a href="#">terms & conditions</a></span>
           </label>
         </div>
-        <div class="form-input-button">
-          <button type="submit">Start My Free Trial</button>
+        <div class="form-submit">
+          <button type="submit" id="submit">Start My Free Trial</button>
         </div>
       </div>
-    </div>
+    </form>
 
   </div>
 
-  <div class="pop-up-display">
-    <div class="pop-up">
-      <div class="pop-up-content">
-        <button type="button" class="close-button">X</button>
-        <div class="pop-up-header">
-          <img src="./ressources/Welcome@2x.png" alt="image">
-        </div>
-        <div class="pop-up-body">
-          <h2>Welcome!</h2>
-          <p>Thanks for filling out the form. A confirmation email has been sent to your hotmail account.</p>
-        </div>
+  <div class="pop-up">
+    <div class="pop-up-content">
+      <button type="button" class="close-button">X</button>
+      <div class="pop-up-header">
+        <img src="./ressources/Welcome@2x.png" alt="image">
+      </div>
+      <div class="pop-up-body">
+        <h2>Welcome!</h2>
+        <p>Thanks for filling out the form. <br> A confirmation email has been sent to <span id="popup-email"></span></p>
       </div>
     </div>
   </div>
+
   <script src="main.js"></script>
 </body>
 </html>
